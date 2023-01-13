@@ -6,7 +6,7 @@
  * Expected Output :
  * 1000.0 inch is 25.4 meters
  */
-package Lesson_One_HomeWork;
+package lesson1;
 
 public class Task1 {
     public static void main(String[] args) {

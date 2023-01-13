@@ -7,7 +7,7 @@
  * The sum of all digits in 565 is 16
  */
 
-package Lesson_One_HomeWork;
+package lesson1;
 
 public class Task2 {
     public static void main(String[] args) throws Exception{

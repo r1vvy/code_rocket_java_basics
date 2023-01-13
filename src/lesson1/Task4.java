@@ -5,7 +5,7 @@
  * Expected Output:
  * Current time is 23:40:24
  */
-package Lesson_One_HomeWork;
+package lesson1;
 
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;

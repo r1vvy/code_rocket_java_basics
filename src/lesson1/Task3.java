@@ -6,7 +6,7 @@
  * 3456789 minutes is approximately 6 years and 210 days
  */
 
-package Lesson_One_HomeWork;
+package lesson1;
 
 public class Task3 {
     public static void main(String[] args) {
