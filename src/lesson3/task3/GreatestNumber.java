@@ -2,7 +2,7 @@ package lesson3.task3;
 
 import java.util.Scanner;
 
-public class Main {
+public class GreatestNumber {
     public static void main(String[] args) {
         int numberOne = getNumber();
         int numberTwo = getNumber();
@@ -12,7 +12,7 @@ public class Main {
     }
 
     // bad since sc isnt closed.
-    private static int getNumber() {
+    public static int getNumber() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Input number: ");
         return sc.nextInt();

@@ -1,10 +1,10 @@
-package lesson3.task6;
+package lesson3.task32;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-public class compareNumbers {
+public class CompareNumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -22,8 +22,8 @@ public class compareNumbers {
         }
     }
     public static boolean compareNumbers(float numberOne, float numberTwo) {
-        BigDecimal tempNumberOne = BigDecimal.valueOf(numberOne).setScale(3, RoundingMode.HALF_UP);
-        BigDecimal tempNumberTwo = BigDecimal.valueOf(numberTwo).setScale(3, RoundingMode.HALF_UP);
+        BigDecimal tempNumberOne = BigDecimal.valueOf(numberOne).setScale(2, RoundingMode.HALF_UP);
+        BigDecimal tempNumberTwo = BigDecimal.valueOf(numberTwo).setScale(2, RoundingMode.HALF_UP);
 
         return tempNumberOne.equals(tempNumberTwo);
     }

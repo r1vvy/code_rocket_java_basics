@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lesson3/task23/RightDownTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task23/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task2/QuadraticEquationSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task3/GreatestNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task6/compareNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task6/CompareNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

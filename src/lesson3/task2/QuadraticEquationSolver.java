@@ -2,7 +2,7 @@ package lesson3.task2;
 
 import java.util.Scanner;
 
-public class Main {
+public class QuadraticEquationSolver {
     public static void main(String[] args) {
         // Test data
         Scanner sc = new Scanner(System.in);
