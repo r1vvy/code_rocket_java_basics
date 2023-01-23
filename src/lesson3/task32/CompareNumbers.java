@@ -6,20 +6,22 @@ import java.util.Scanner;
 
 public class CompareNumbers {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        CompareNumbers compareNumbers = new CompareNumbers();
 
-        System.out.print("Input a number: ");
-        float numberOne = sc.nextFloat();
-
-        System.out.print("Input a number: ");
-        float numberTwo = sc.nextFloat();
-        sc.close();
+        float numberOne = compareNumbers.userFloatNumberInput();
+        float numberTwo = compareNumbers.userFloatNumberInput();
 
         if(compareNumbers(numberOne, numberTwo)) {
             System.out.println("They are the same");
         } else {
             System.out.println("They are different");
         }
+    }
+    public float userFloatNumberInput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a number: ");
+
+        return sc.nextFloat();
     }
     public static boolean compareNumbers(float numberOne, float numberTwo) {
         BigDecimal tempNumberOne = BigDecimal.valueOf(numberOne).setScale(2, RoundingMode.HALF_UP);

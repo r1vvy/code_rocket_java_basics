@@ -4,27 +4,27 @@ import java.util.Scanner;
 
 public class NumberOrderComparator {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        NumberOrderComparator numberOrderComparator = new NumberOrderComparator();
 
-        System.out.print("Input 1st number: ");
-        int numberOne = sc.nextInt();
-
-        System.out.print("Input 2nd number: ");
-        int numberTwo = sc.nextInt();
-
-        System.out.print("Input 3rd number: ");
-        int numberThree = sc.nextInt();
-
-        sc.close();
+        int numberOne = numberOrderComparator.userIntNumberInput();
+        int numberTwo = numberOrderComparator.userIntNumberInput();
+        int numberThree = numberOrderComparator.userIntNumberInput();
 
         if(areIncreasing(numberOne, numberTwo, numberThree)) {
             System.out.println("increasing");
         }
-        else if(!areDecreasing(numberOne, numberTwo, numberThree)) {
+        else if(areDecreasing(numberOne, numberTwo, numberThree)) {
             System.out.println("decreasing");
         } else {
             System.out.println("Neither increasing or decreasing order");
         }
+    }
+
+    public int userIntNumberInput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a number: ");
+
+        return sc.nextInt();
     }
 
     public static boolean areIncreasing(int numberOne, int numberTwo, int numberThree) {

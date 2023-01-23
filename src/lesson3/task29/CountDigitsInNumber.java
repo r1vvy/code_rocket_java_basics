@@ -11,7 +11,7 @@ public class CountDigitsInNumber {
         int number = sc.nextInt();
         sc.close();
 
-        System.out.println(countDigits(125463));
+        System.out.println(countDigits(number));
     }
 
     public static int countDigits(int number) {

@@ -20,43 +20,57 @@ public class DiamondChars {
             char c = 'A';
             // Outer for loop to iterate for each row
             for (int i = 1; i < (rows * 2); i++) {
-                // Inner for loop to print spaces before each row
-                for (int j = rows - count2; j > 0; j--)
-                {
-                    System.out.print(" ");
-                }
-                // If the current row is in the top half of the pyramid
-                if (i < rows) {
-                    // Increase the space count
-                    count2++;
-                } else {
-                    // Decrease the space count
-                    count2--;
-                }
-                // Inner for loop to print characters in each row
-                for (int j = 0; j < count; j++) {
-                    System.out.print(c); // Print the current character
-                    // If the current character is in the left half of the row
-                    if (j < count / 2) {
-                        // Increment the character
-                        c++;
-                    } else {
-                        // Decrement the character
-                        c--;
-                    }
-                }
-                // If the current row is in the top half of the pyramid
-                if (i < rows) {
-                    // Increase the character count
-                    count += 2;
-                } else {
-                    // Decrease the character count
-                    count -= 2;
-                }
+                count2 = printSpaces(rows, count2, i);
+                printChars(count, c);
+                count = setCount(rows, count, i);
                 // reset the character to 'A'
                 c = 'A';
 
                 System.out.println();
             }
+    }
+
+    private static int setCount(int rows, int count, int i) {
+        // If the current row is in the top half of the pyramid
+        if (i < rows) {
+            // Increase the character count
+            count += 2;
+        } else {
+            // Decrease the character count
+            count -= 2;
+        }
+        return count;
+    }
+
+    private static void printChars(int count, char c) {
+        // Inner for loop to print characters in each row
+        for (int j = 0; j < count; j++) {
+            System.out.print(c); // Print the current character
+            // If the current character is in the left half of the row
+            if (j < count / 2) {
+                // Increment the character
+                c++;
+            } else {
+                // Decrement the character
+                c--;
+            }
+        }
+    }
+
+    private static int printSpaces(int rows, int count2, int i) {
+        // Inner for loop to print spaces before each row
+        for (int j = rows - count2; j > 0; j--)
+        {
+            System.out.print(" ");
+        }
+        // If the current row is in the top half of the pyramid
+        if (i < rows) {
+            // Increase the space count
+            count2++;
+        } else {
+            // Decrease the space count
+            count2--;
+        }
+        return count2;
     }
 }

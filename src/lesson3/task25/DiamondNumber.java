@@ -15,18 +15,9 @@ public class DiamondNumber {
     private static void printPyramid(int rows) {
         for (int i = 1 ; i <= rows; i++ )
         {
-            for (int j = 1 ; j <= rows - i; j++ )
-            {
-                System.out.print(" ");
-            }
-            for (int k = i ; k >= 1; k-- )
-            {
-                System.out.print(k);
-            }
-            for (int l = 2 ; l <= i; l++)
-            {
-                System.out.print(l);
-            }
+            printWhitespace(rows, i);
+            printLeftLineNumbers(i);
+            printRightLineNumbers(i);
             System.out.println();
         }
     }
@@ -34,19 +25,31 @@ public class DiamondNumber {
     private static void printReversePyramid(int rows) {
         for (int i = rows - 1; i > 0; i-- )
         {
-            for (int j = 1; j <= rows - i; j++ )
-            {
-                System.out.print(" ");
-            }
-            for (int k = i ; k >= 1; k-- )
-            {
-                System.out.print(k);
-            }
-            for (int l = 2 ; l <= i; l++)
-            {
-                System.out.print(l);
-            }
+            printWhitespace(rows, i);
+            printLeftLineNumbers(i);
+            printRightLineNumbers(i);
             System.out.println();
+        }
+    }
+
+    private static void printRightLineNumbers(int i) {
+        for (int l = 2; l <= i; l++)
+        {
+            System.out.print(l);
+        }
+    }
+
+    private static void printLeftLineNumbers(int i) {
+        for (int k = i; k >= 1; k-- )
+        {
+            System.out.print(k);
+        }
+    }
+
+    private static void printWhitespace(int rows, int i) {
+        for (int j = 1; j <= rows - i; j++ )
+        {
+            System.out.print(" ");
         }
     }
 }

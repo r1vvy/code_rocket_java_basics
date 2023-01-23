@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task2/QuadraticEquationSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task11/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task15/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task15/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task17/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task17/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task18/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task18/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task20/FloydTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task20/FloydTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task22/PascalsTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task22/PascalsTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task23/RightDownTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task23/RightDownTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task24/LeftUpTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task24/LeftUpTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task3/GreatestNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task6/compareNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task6/CompareNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task29/CountDigitsInNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task29/CountDigitsInNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task30/NumberComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task30/NumberComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task31/NumberOrderComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task31/NumberOrderComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson3/task32/CompareNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task32/CompareNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

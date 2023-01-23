@@ -10,13 +10,21 @@ public class RightDownTriangle {
         sc.close();
 
         for (int i = 0; i < termsNumber; i++) {
-            for (int j = 0; j < i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = termsNumber; j > i; j--) {
-                System.out.print("*");
-            }
+            printSpaces(i);
+            printSpaces(termsNumber, i);
             System.out.println();
+        }
+    }
+
+    private static void printSpaces(int i) {
+        for (int j = 0; j < i; j++) {
+            System.out.print(" ");
+        }
+    }
+
+    private static void printSpaces(int termsNumber, int i) {
+        for (int j = termsNumber; j > i; j--) {
+            System.out.print("*");
         }
     }
 }

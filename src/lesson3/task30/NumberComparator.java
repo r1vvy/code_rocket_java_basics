@@ -4,18 +4,11 @@ import java.util.Scanner;
 
 public class NumberComparator {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        NumberComparator numberComparator = new NumberComparator();
 
-        System.out.print("Input 1st number: ");
-        int numberOne = sc.nextInt();
-
-        System.out.print("Input 2nd number: ");
-        int numberTwo = sc.nextInt();
-
-        System.out.print("Input 3rd number: ");
-        int numberThree = sc.nextInt();
-
-        sc.close();
+        int numberOne = numberComparator.userIntNumberInput();
+        int numberTwo = numberComparator.userIntNumberInput();
+        int numberThree = numberComparator.userIntNumberInput();
 
         if(areEqual(numberOne, numberTwo, numberThree)) {
             System.out.println("All numbers are equal");
@@ -26,7 +19,12 @@ public class NumberComparator {
             System.out.println("All numbers are different");
         }
     }
+    public int userIntNumberInput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input a number: ");
 
+        return sc.nextInt();
+    }
     public static boolean areEqual(int numberOne, int numberTwo, int numberThree) {
         return (numberOne == numberTwo && numberOne == numberThree);
     }

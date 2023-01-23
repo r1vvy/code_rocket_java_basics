@@ -27,15 +27,28 @@ public class PascalsTriangle {
         int n = rows;
         PascalsTriangle calcFactorial = new PascalsTriangle();
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i; j++) {
-                // for left spacing
-                System.out.print(" ");
-            }
-            for (int j = 0; j <= i; j++) {
-                int nCr = calcFactorial.factorial(i) / (calcFactorial.factorial(i - j) * calcFactorial.factorial(j));
-                System.out.print(" " + nCr);
-            }
+            printLeftSpace(n, i);
+            printnCr(calcFactorial, i);
             System.out.println();
+        }
+    }
+
+    private static void printnCr(PascalsTriangle calcFactorial, int i) {
+        for (int j = 0; j <= i; j++) {
+            int nCr = getnCr(calcFactorial, i, j);
+            System.out.print(" " + nCr);
+        }
+    }
+
+    private static int getnCr(PascalsTriangle calcFactorial, int i, int j) {
+        int nCr = calcFactorial.factorial(i) / (calcFactorial.factorial(i - j) * calcFactorial.factorial(j));
+        return nCr;
+    }
+
+    private static void printLeftSpace(int n, int i) {
+        for (int j = 0; j < n - i; j++) {
+            // for left spacing
+            System.out.print(" ");
         }
     }
 

@@ -9,14 +9,26 @@ public class LeftUpTriangle {
         int termsNumber = sc.nextInt();
         sc.close();
 
+        print(termsNumber);
+    }
+
+    private static void print(int termsNumber) {
         for (int i = 0; i < termsNumber; i++) {
-            for (int j = 1; j < termsNumber - i; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 0; j <= i; j++) {
-                System.out.print("@");
-            }
+            printWhitespace(termsNumber, i);
+            printSymbols(i);
             System.out.println();
+        }
+    }
+
+    private static void printSymbols(int i) {
+        for (int j = 0; j <= i; j++) {
+            System.out.print("@");
+        }
+    }
+
+    private static void printWhitespace(int termsNumber, int i) {
+        for (int j = 1; j < termsNumber - i; j++) {
+            System.out.print(" ");
         }
     }
 }

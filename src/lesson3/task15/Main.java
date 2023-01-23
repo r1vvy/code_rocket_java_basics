@@ -12,14 +12,20 @@ public class Main {
         int[] oddNumbers = getOdds(termsNumber);
         int sum = 0;
 
-        for (int oddNumber : oddNumbers) {
-            System.out.println(oddNumber);
-            sum += oddNumber;
-        }
+        sum = getOddNumberSum(oddNumbers, sum);
 
 
         System.out.println("The Sum of odd Natural Number upto " + termsNumber + " terms is: " + sum);
     }
+
+    private static int getOddNumberSum(int[] oddNumbers, int sum) {
+        for (int oddNumber : oddNumbers) {
+            System.out.println(oddNumber);
+            sum += oddNumber;
+        }
+        return sum;
+    }
+
     private static int[] getOdds(int termsNumber) {
         int[] oddNumbers = new int[termsNumber];
         oddNumbers[0] = 1;
