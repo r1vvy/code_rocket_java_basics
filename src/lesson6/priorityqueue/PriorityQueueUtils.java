@@ -1,4 +1,4 @@
-package lesson5.priorityqueue;
+package lesson6.priorityqueue;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

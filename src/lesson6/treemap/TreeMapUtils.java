@@ -1,4 +1,4 @@
-package lesson5.treemap;
+package lesson6.treemap;
 
 import java.util.Comparator;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package lesson4.myarraylist;
+package lesson5.myarraylist;
 
 public class MyArrayList<T>{
     private T[] array;

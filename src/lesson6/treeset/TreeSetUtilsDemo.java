@@ -1,4 +1,4 @@
-package lesson5.treeset;
+package lesson6.treeset;
 
 import java.util.TreeSet;
 

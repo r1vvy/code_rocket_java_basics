@@ -1,4 +1,4 @@
-package lesson4.myarraylist;
+package lesson5.myarraylist;
 
 public class MyArrayListDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lesson4.linkedlistutils;
+package lesson5.linkedlistutils;
 
 import java.util.LinkedList;
 

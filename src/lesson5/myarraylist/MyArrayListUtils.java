@@ -1,4 +1,4 @@
-package lesson4.myarraylist;
+package lesson5.myarraylist;
 
 public class MyArrayListUtils {
     public static <T> void copy(MyArrayList<T> src, MyArrayList<T> dst) {
