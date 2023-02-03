@@ -1,5 +1,6 @@
 package lesson7;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FahrenheitToCelsiusConverter implements TemperatureConverter {
     @Override
@@ -10,6 +11,8 @@ public class FahrenheitToCelsiusConverter implements TemperatureConverter {
     @Override
     public BigDecimal convert(TemperatureConversionRequest request) {
         return request.getTemperature().subtract(TemperatureConversionConstants.FAHRENHEIT_CELSIUS_OFFSET)
-                .multiply(TemperatureConversionConstants.FAHRENHEIT_CELSIUS_MULTIPLIER);
+                .divide(TemperatureConversionConstants.FAHRENHEIT_CELSIUS_MULTIPLIER, 2, RoundingMode.HALF_UP);
     }
+
+    
 }

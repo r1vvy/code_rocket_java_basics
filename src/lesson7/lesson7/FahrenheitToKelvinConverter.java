@@ -1,5 +1,7 @@
 package lesson7;
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 public class FahrenheitToKelvinConverter implements TemperatureConverter{
     @Override
@@ -9,8 +11,7 @@ public class FahrenheitToKelvinConverter implements TemperatureConverter{
 
     @Override
     public BigDecimal convert(TemperatureConversionRequest request) {
-        return request.getTemperature().subtract(TemperatureConversionConstants.FAHRENHEIT_CELSIUS_OFFSET)
-                .multiply(TemperatureConversionConstants.FAHRENHEIT_CELSIUS_MULTIPLIER)
-                .add(TemperatureConversionConstants.CELSIUS_KELVIN_OFFSET);
+        return request.getTemperature().add(TemperatureConversionConstants.FAHRENHEIT_KELVIN_OFFSET)
+                .multiply(TemperatureConversionConstants.FAHRENHEIT_KELVIN_MULTIPLIER).setScale(2, RoundingMode.HALF_UP);
     }
 }
