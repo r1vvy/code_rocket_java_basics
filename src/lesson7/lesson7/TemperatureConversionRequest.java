@@ -1,3 +1,4 @@
+package lesson7;
 import java.math.BigDecimal;
 
 public class TemperatureConversionRequest {
