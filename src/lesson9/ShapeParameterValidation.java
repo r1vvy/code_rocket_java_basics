@@ -1,6 +1,6 @@
 package lesson9;
 
-public class ShapeParamaterValidation {
+public class ShapeParameterValidation {
     
     public static void validate(Shape shape) {
         if (shape.getParametersMap().containsValue(null)) {
