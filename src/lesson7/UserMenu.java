@@ -1,5 +1,4 @@
 package lesson7;
-import java.math.BigDecimal;
 import java.util.List;
 
 public class UserMenu {
@@ -22,10 +21,10 @@ public class UserMenu {
         while(true) {
             printOutMenu();
             int choice = userInput.getNumber() - 1;
-            MenuAction menuAction = menuActions.get(choice);
 
-            if(choice >= 0 && choice <= this.menuActions.size() - 1) {
-                menuAction.doAction();
+            if(choice >= 0 && choice < this.menuActions.size()) {
+                MenuAction menuAction;
+                menuActions.get(choice).doAction();
             } else {
                 System.out.println("Invalid choice! Try again.");
             }

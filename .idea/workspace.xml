@@ -6,20 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task11/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task15/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task15/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task17/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task17/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task18/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task18/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task20/FloydTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task20/FloydTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task22/PascalsTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task22/PascalsTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task23/RightDownTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task23/RightDownTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task24/LeftUpTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task24/LeftUpTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task25/DiamondNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task26/DiamondChars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task29/CountDigitsInNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task29/CountDigitsInNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task30/NumberComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task30/NumberComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task31/NumberOrderComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task31/NumberOrderComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson3/task32/CompareNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson3/task32/CompareNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/CelsiusToFahrenheitConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/CelsiusToFahrenheitConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/CelsiusToKelvinConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/CelsiusToKelvinConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/ExitMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/ExitMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/FahrenheitToCelsiusConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/FahrenheitToCelsiusConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/FahrenheitToKelvinConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/FahrenheitToKelvinConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/KelvinToCelsiusConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/KelvinToCelsiusConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/KelvinToFahrenheitConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/KelvinToFahrenheitConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/MenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/MenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConversionConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConversionConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConversionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConversionDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConversionMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConversionMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConversionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConversionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConversionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConversionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/TemperatureConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/TemperatureConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/Tests/TemperatureConversionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/tests/TemperatureConversionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson7/lesson7/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson7/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +68,47 @@
       <recent name="$PROJECT_DIR$/src/lesson2/task6" />
       <recent name="$PROJECT_DIR$/src/lesson2/task4" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="lesson7" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="lesson2.task6" />
       <recent name="lesson2.task4" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.TemperatureConversionDemo">
+    <configuration name="TemperatureConversionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson7.TemperatureConversionDemo" />
+      <module name="Hello World" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TemperatureConversionServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson7.tests.TemperatureConversionServiceTest" />
+      <module name="Hello World" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson7.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TemperatureConversionDemo" />
+        <item itemvalue="Application.TemperatureConversionServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

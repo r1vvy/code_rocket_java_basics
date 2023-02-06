@@ -1,4 +1,4 @@
-package lesson7.Tests;
+package lesson7.tests;
 
 import java.math.BigDecimal;
 import java.util.List;
