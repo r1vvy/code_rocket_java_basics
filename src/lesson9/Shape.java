@@ -1,10 +1,13 @@
 package lesson9;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.List;
 
 public abstract class Shape {
-    private BigDecimal area;
     private BigDecimal perimeter;
+    private BigDecimal area;
+    private HashMap<String, BigDecimal> parametersMap = new HashMap<>();
 
     public Shape() {
     }
@@ -30,4 +33,22 @@ public abstract class Shape {
     }
     public void calculateArea() {
     }
+
+    public HashMap<String, BigDecimal> getParametersMap() {
+        return parametersMap;
+    }
+
+    public void setParametersMap(HashMap<String, BigDecimal> parametersMap) {
+        this.parametersMap = parametersMap;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Shape{" +
+                "area=" + area +
+                ", perimeter=" + perimeter +
+                '}';
+    }
+
 }

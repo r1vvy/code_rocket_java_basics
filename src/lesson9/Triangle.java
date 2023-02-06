@@ -2,75 +2,64 @@ package lesson9;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.List;
 import java.util.Objects;
 
 public class Triangle extends Shape {
-    private final List<BigDecimal> sides;
-    public Triangle(List<BigDecimal> sides) {
-        super();
-        this.sides = sides;
-    }
 
-    public List<BigDecimal> getSides() {
-        return sides;
+    public Triangle() {
+        super();
+        this.getParametersMap().put("sideA", null);
+        this.getParametersMap().put("sideB", null);
+        this.getParametersMap().put("sideC", null);
     }
 
     @Override
     public void calculatePerimeter() {
-        BigDecimal tempPerimeter = new BigDecimal("0");
-        this.sides.forEach(side -> tempPerimeter.add(side));
-
-        this.setPerimeter(tempPerimeter);
+        if (this.isPerimeterNull()) {
+            BigDecimal sideA = this.getParametersMap().get("sideA");
+            BigDecimal sideB = this.getParametersMap().get("sideB");
+            BigDecimal sideC = this.getParametersMap().get("sideC");
+            BigDecimal perimeter = sideA.add(sideB).add(sideC);
+            this.setPerimeter(perimeter);
+        }
     }
 
     @Override
     public void calculateArea() {
-        BigDecimal tempArea = new BigDecimal("1");
-        BigDecimal tempHalfPerimeter;
-        // Area = square root of (p*(p-a)*(p-b)*(p-c))
-        if(isPerimeterNull()) {
-            tempHalfPerimeter = createHalfPerimeterFromSides();
-        } else {
-            tempHalfPerimeter = this.getPerimeter().divide(new BigDecimal("2"));
-        }
-        this.sides.forEach(side -> tempArea.multiply(tempHalfPerimeter.subtract(side)));
-        tempArea.multiply(tempHalfPerimeter);
-        tempArea.sqrt(new MathContext(3));
-
-        this.setArea(tempArea);
-    }
-
-    private BigDecimal createHalfPerimeterFromSides() {
-        if(!this.sides.isEmpty()) {
-            BigDecimal tempHalfPerimeter = new BigDecimal("0");
-            this.sides.forEach(side -> tempHalfPerimeter.add(side));
-            tempHalfPerimeter.divide(new BigDecimal("2"));
-
-            return tempHalfPerimeter;
-        } else {
-            // TODO: throw exception()
-            return null;
+        if (this.getArea() == null) {
+            BigDecimal sideA = this.getParametersMap().get("sideA");
+            BigDecimal sideB = this.getParametersMap().get("sideB");
+            BigDecimal sideC = this.getParametersMap().get("sideC");
+            BigDecimal halfPerimeter = this.getPerimeter().divide(BigDecimal.valueOf(2), MathContext.DECIMAL32);
+            BigDecimal area = halfPerimeter.multiply(halfPerimeter.subtract(sideA)).multiply(halfPerimeter.subtract(sideB)).multiply(halfPerimeter.subtract(sideC));
+            area = BigDecimal.valueOf(Math.sqrt(area.doubleValue()));
+            this.setArea(area);
         }
     }
 
     @Override
     public String toString() {
         return "Triangle{" +
-                "sides=" + sides +
+                "area=" + this.getArea() +
+                ", perimeter=" + this.getPerimeter() +
+                ", sideA=" + this.getParametersMap().get("sideA") +
+                ", sideB=" + this.getParametersMap().get("sideB") +
+                ", sideC=" + this.getParametersMap().get("sideC") +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Triangle)) return false;
         Triangle triangle = (Triangle) o;
-        return Objects.equals(sides, triangle.sides);
+        return Objects.equals(this.getArea(), triangle.getArea()) &&
+                Objects.equals(this.getPerimeter(), triangle.getPerimeter());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sides);
+        return Objects.hash(this.getArea(), this.getPerimeter());
     }
+   
 }
