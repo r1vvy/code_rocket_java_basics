@@ -1,9 +1,9 @@
 package lesson9;
 
 public class ShapeCreationRequest {
-    private String shape;
+    private Shape shape;
 
-    public ShapeCreationRequest(String shape) {
+    public ShapeCreationRequest(Shape shape) {
         this.shape = shape;
     }
 

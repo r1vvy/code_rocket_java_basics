@@ -14,6 +14,6 @@ public class ShapeDemo {
                         )
                 )
         );
-        shapes.forEach(shape -> System.out.println(shape.getClass().getCanonicalName()));
+        shapes.forEach(shape -> System.out.println(shape.getClass().getSimpleName()));
     }
 }
