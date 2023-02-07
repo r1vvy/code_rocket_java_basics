@@ -22,7 +22,7 @@ public class UserInput {
         printAllShapeClassSimpleNames();
 
         int shapeChoice = scanner.nextInt();
-        if(0 > shapeChoice || shapeChoice > shapeTypes.size()) {
+        if(shapeChoice < 0 || shapeChoice >= shapeTypes.size()) {
             throw new IllegalArgumentException("Invalid shape choice");
         }
 

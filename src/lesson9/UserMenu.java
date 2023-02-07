@@ -14,12 +14,17 @@ public class UserMenu {
     public void start() {
         while (true) {
             printMenu();
-            int choice = userInput.getNumber();
-            if (0 > choice || choice > actions.size()) {
-                throw new IllegalArgumentException("Invalid choice");
-            } else {
-                MenuAction action = actions.get(choice);
-                action.execute();
+            try {
+                int choice = userInput.getNumber();
+                if (choice < 0 || choice >= actions.size()) {
+                    throw new IllegalArgumentException("Invalid choice");
+                } else {
+                    MenuAction action = actions.get(choice);
+                    action.execute();
+                }
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
+                System.err.println("Try again!");
             }
         }
     }
