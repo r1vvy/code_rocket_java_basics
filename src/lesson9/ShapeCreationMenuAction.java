@@ -17,10 +17,15 @@ public class ShapeCreationMenuAction implements MenuAction{
     
     @Override
     public void execute() {
-        ShapeCreationRequest request = userInput.getShapeCreationRequestFromUser();
-        Shape shape = shapeCreationService.createShapeFromUserInput(request);
-        userInput.getShapeStorage().addShape(shape);
+        try {
+            ShapeCreationRequest request = userInput.getShapeCreationRequestFromUser();
+            Shape shape = shapeCreationService.createShapeFromUserInput(request);
+            userInput.getShapeStorage().addShape(shape);
 
-        System.out.println(shape.toString());
+            System.out.println(shape.toString());
+        } catch (ShapeValidationException e) {
+            System.err.println("Shape argument values cannot be less than or equal to ZERO!");
+            System.err.println("Please try again!");
+        }
     }
 }

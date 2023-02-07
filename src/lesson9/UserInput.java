@@ -43,13 +43,11 @@ public class UserInput {
         return parameters;
     }
 
-    public ShapeChoiceRequest getShapeChoiceRequestFromUser() {
+    public ShapeChoiceRequest getShapeChoiceRequestFromUser() throws Exception {
         Scanner scanner = new Scanner(System.in);
         List<Shape> existingShapes = this.shapeStorage.getShapes();
         if(existingShapes.isEmpty()) {
-            // TODO: throws exception
-            System.out.println("No existing shapes found, please create a new shape first");
-            return null;
+            throw new Exception("There are no existing shapes");
         } else {
             this.shapeStorage.printShapes();
             int shapeChoice = scanner.nextInt();
@@ -60,12 +58,7 @@ public class UserInput {
             }
         }
     }
-    public void getShapeCalcRequestFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you want to calculate?");
 
-
-    }
     public ShapeStorage getShapeStorage() {
         return shapeStorage;
     }
