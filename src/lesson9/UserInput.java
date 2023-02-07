@@ -16,20 +16,25 @@ public class UserInput {
     }
 
     public ShapeCreationRequest getShapeCreationRequestFromUser() {
-        Scanner scanner = new Scanner(System.in);
         
         System.out.println("Please choose shape: ");
         printAllShapeClassSimpleNames();
 
-        int shapeChoice = scanner.nextInt();
-        if(shapeChoice < 0 || shapeChoice >= shapeTypes.size()) {
-            throw new IllegalArgumentException("Invalid shape choice");
-        }
+        int shapeChoice = getShapeChoice();
 
         Shape newShape = shapeTypes.get(shapeChoice);
         HashMap<String, BigDecimal> parameters = getShapeCreationParametersFromUser(newShape);
 
         return new ShapeCreationRequest(newShape, parameters);
+    }
+
+    private int getShapeChoice() {
+        Scanner scanner = new Scanner(System.in);
+        int shapeChoice = scanner.nextInt();
+        if(shapeChoice < 0 || shapeChoice >= shapeTypes.size()) {
+            throw new IllegalArgumentException("Invalid shape choice");
+        }
+        return shapeChoice;
     }
 
     private HashMap<String, BigDecimal> getShapeCreationParametersFromUser(Shape shape) {
@@ -47,15 +52,14 @@ public class UserInput {
         Scanner scanner = new Scanner(System.in);
         List<Shape> existingShapes = this.shapeStorage.getShapes();
         if(existingShapes.isEmpty()) {
-            throw new Exception("There are no existing shapes");
+            throw new Exception("There are no existing shapes.");
         } else {
             this.shapeStorage.printShapes();
+
             int shapeChoice = scanner.nextInt();
-            if(0 > shapeChoice || shapeChoice > shapeTypes.size()) {
-                throw new IllegalArgumentException("Invalid shape choice");
-            } else {
-                return new ShapeChoiceRequest(existingShapes.get(shapeChoice));
-            }
+            shapeChoice = getShapeChoice();
+
+            return new ShapeChoiceRequest(existingShapes.get(shapeChoice));
         }
     }
 

@@ -1,5 +1,6 @@
 package lesson9;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class UserMenu {
@@ -22,8 +23,10 @@ public class UserMenu {
                     MenuAction action = actions.get(choice);
                     action.execute();
                 }
-            } catch (IllegalArgumentException e) {
-                System.err.println(e.getMessage());
+            } catch (IllegalArgumentException | InputMismatchException e) {
+                if(e.getMessage() != null) {
+                    System.err.println(e.getMessage());
+                }
                 System.err.println("Try again!");
             }
         }
