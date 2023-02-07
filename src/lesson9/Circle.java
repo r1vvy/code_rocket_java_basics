@@ -12,20 +12,14 @@ public class Circle extends Shape {
     
     @Override
     public void calculatePerimeter() {
-        if (this.isPerimeterNull()) {
-            BigDecimal radius = this.getParametersMap().get("radius");
-            BigDecimal perimeter = radius.multiply(BigDecimal.valueOf(2)).multiply(BigDecimal.valueOf(Math.PI));
-            this.setPerimeter(perimeter);
-        }
+        BigDecimal radius = this.getParametersMap().get("radius");
+        this.perimeter = radius.multiply(BigDecimal.valueOf(2)).multiply(BigDecimal.valueOf(Math.PI));
     }
 
     @Override
     public void calculateArea() {
-        if (this.getArea() == null) {
-            BigDecimal radius = this.getParametersMap().get("radius");
-            BigDecimal area = radius.pow(2).multiply(BigDecimal.valueOf(Math.PI));
-            this.setArea(area);
-        }
+        BigDecimal radius = this.getParametersMap().get("radius");
+        this.area = radius.pow(2).multiply(BigDecimal.valueOf(Math.PI));
     }
 
     @Override

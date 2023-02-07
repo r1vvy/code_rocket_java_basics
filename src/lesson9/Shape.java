@@ -5,33 +5,34 @@ import java.util.HashMap;
 import java.util.List;
 
 public abstract class Shape {
-    private BigDecimal perimeter;
-    private BigDecimal area;
-    private HashMap<String, BigDecimal> parametersMap = new HashMap<>();
+    protected BigDecimal perimeter;
+    protected BigDecimal area;
+    protected HashMap<String, BigDecimal> parametersMap = new HashMap<>();
+
+    abstract void calculateArea();
+    abstract void calculatePerimeter();
 
     public Shape() {
     }
 
-    public BigDecimal getArea() {
-        return area;
-    }
     public BigDecimal getPerimeter() {
         return perimeter;
+    }
+
+    public void setPerimeter(BigDecimal perimeter) {
+        this.perimeter = perimeter;
+    }
+
+    public BigDecimal getArea() {
+        return area;
     }
 
     public void setArea(BigDecimal area) {
         this.area = area;
     }
 
-    public void setPerimeter(BigDecimal perimeter) {
-        this.perimeter = perimeter;
-    }
     public boolean isPerimeterNull() {
         return this.perimeter == null;
-    }
-    public void calculatePerimeter() {
-    }
-    public void calculateArea() {
     }
 
     public HashMap<String, BigDecimal> getParametersMap() {

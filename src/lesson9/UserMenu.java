@@ -17,9 +17,10 @@ public class UserMenu {
             int choice = userInput.getNumber();
             if (0 > choice || choice > actions.size()) {
                 throw new IllegalArgumentException("Invalid choice");
+            } else {
+                MenuAction action = actions.get(choice);
+                action.execute();
             }
-            MenuAction action = actions.get(choice);
-            action.execute();
         }
     }
 
