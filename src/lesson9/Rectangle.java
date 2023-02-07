@@ -14,7 +14,7 @@ public class Rectangle extends Shape {
         BigDecimal sideA = this.getParametersMap().get("sideA");
         BigDecimal sideB = this.getParametersMap().get("sideB");
 
-        this.perimeter = sideA.add(sideB).multiply(new BigDecimal("2"));
+        this.setPerimeter(sideA.add(sideB).multiply(new BigDecimal("2")));
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Rectangle extends Shape {
         BigDecimal sideA = this.getParametersMap().get("sideA");
         BigDecimal sideB = this.getParametersMap().get("sideB");
 
-        this.area = sideA.multiply(sideB);
+        this.setArea(sideA.multiply(sideB));
     }
 
     @Override

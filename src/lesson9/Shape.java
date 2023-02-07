@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public abstract class Shape {
-    protected BigDecimal perimeter;
-    protected BigDecimal area;
-    protected HashMap<String, BigDecimal> parametersMap = new HashMap<>();
+    private BigDecimal perimeter;
+    private BigDecimal area;
+    private HashMap<String, BigDecimal> parametersMap = new HashMap<>();
 
     abstract void calculateArea();
     abstract void calculatePerimeter();

@@ -13,13 +13,13 @@ public class Circle extends Shape {
     @Override
     public void calculatePerimeter() {
         BigDecimal radius = this.getParametersMap().get("radius");
-        this.perimeter = radius.multiply(BigDecimal.valueOf(2)).multiply(BigDecimal.valueOf(Math.PI));
+        this.setPerimeter(radius.multiply(BigDecimal.valueOf(2)).multiply(BigDecimal.valueOf(Math.PI)));
     }
 
     @Override
     public void calculateArea() {
         BigDecimal radius = this.getParametersMap().get("radius");
-        this.area = radius.pow(2).multiply(BigDecimal.valueOf(Math.PI));
+        this.setArea(radius.pow(2).multiply(BigDecimal.valueOf(Math.PI)));
     }
 
     @Override
