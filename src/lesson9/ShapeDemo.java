@@ -1,13 +1,12 @@
 package lesson9;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 public class ShapeDemo {
     public static void main(String[] args) {
         List<Shape> shapeTypes = List.of(new Circle() , new Triangle(), new Rectangle());
-        ShapeStorage shapeStorage = new ShapeStorage();
-        UserInput userInput = new UserInput(shapeTypes, shapeStorage);
+        ShapeRepository shapeRepository = new ShapeRepository();
+        UserInput userInput = new UserInput(shapeTypes, shapeRepository);
         
         ShapeCreationService shapeCreationService = new ShapeCreationService();
         ShapeChoiceService shapeChoiceService = new ShapeChoiceService();

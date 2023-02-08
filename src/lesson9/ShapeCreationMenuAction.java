@@ -20,8 +20,12 @@ public class ShapeCreationMenuAction implements MenuAction{
         try {
             ShapeCreationRequest request = userInput.getShapeCreationRequestFromUser();
             Shape shape = shapeCreationService.createShapeFromUserInput(request);
-            userInput.getShapeStorage().addShape(shape);
 
+            // test part
+            ShapeCalculatorImpl shapeCalculator = new ShapeCalculatorImpl();
+            shapeCalculator.calculateArea(shape);
+            //
+            userInput.getShapeRepo().save(shape);
             System.out.println(shape.toString());
         } catch (ShapeValidationException | IllegalArgumentException e) {
             System.err.println(e.getMessage());

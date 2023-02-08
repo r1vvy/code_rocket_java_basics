@@ -1,18 +1,19 @@
 package lesson9;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
+// TODO: exceptions should be thrown in business logic services.
 public class UserInput {
     private final List<Shape> shapeTypes;
-    private ShapeStorage shapeStorage;
+    private ShapeRepository shapeRepo;
 
-    public UserInput(List<Shape> shapeTypes, ShapeStorage shapeStorage) {
+    public UserInput(List<Shape> shapeTypes, ShapeRepository shapeRepo) {
         this.shapeTypes = shapeTypes;
-        this.shapeStorage = shapeStorage;
+        this.shapeRepo = shapeRepo;
     }
 
     public ShapeCreationRequest getShapeCreationRequestFromUser() {
@@ -20,21 +21,36 @@ public class UserInput {
         System.out.println("Please choose shape: ");
         printAllShapeClassSimpleNames();
 
-        int shapeChoice = getShapeChoice();
+        int shapeChoice = getShapeTypeChoice();
 
         Shape newShape = shapeTypes.get(shapeChoice);
         HashMap<String, BigDecimal> parameters = getShapeCreationParametersFromUser(newShape);
 
         return new ShapeCreationRequest(newShape, parameters);
     }
-
-    private int getShapeChoice() {
+    public ShapeChoiceRequest getShapeChoiceRequestFromUser() throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        if(this.shapeRepo.getRepository().isEmpty()) {
+            throw new Exception("There are no existing shapes.");
+        } else {
+            this.shapeRepo.printRepository();
+            return new ShapeChoiceRequest(getExistingShapeChoice());
+        }
+    }
+    private int getShapeTypeChoice() {
         Scanner scanner = new Scanner(System.in);
         int shapeChoice = scanner.nextInt();
         if(shapeChoice < 0 || shapeChoice >= shapeTypes.size()) {
-            throw new IllegalArgumentException("Invalid shape choice");
+            throw new IllegalArgumentException("Invalid shape type choice");
         }
         return shapeChoice;
+    }
+
+    private Shape getExistingShapeChoice() {
+        Scanner scanner = new Scanner(System.in);
+        Integer choice = scanner.nextInt();
+
+        return shapeRepo.findShapeById(choice);
     }
 
     private HashMap<String, BigDecimal> getShapeCreationParametersFromUser(Shape shape) {
@@ -48,23 +64,9 @@ public class UserInput {
         return parameters;
     }
 
-    public ShapeChoiceRequest getShapeChoiceRequestFromUser() throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        List<Shape> existingShapes = this.shapeStorage.getShapes();
-        if(existingShapes.isEmpty()) {
-            throw new Exception("There are no existing shapes.");
-        } else {
-            this.shapeStorage.printShapes();
 
-            int shapeChoice = scanner.nextInt();
-            shapeChoice = getShapeChoice();
-
-            return new ShapeChoiceRequest(existingShapes.get(shapeChoice));
-        }
-    }
-
-    public ShapeStorage getShapeStorage() {
-        return shapeStorage;
+    public ShapeRepository getShapeRepo() {
+        return shapeRepo;
     }
 
     public int getNumber() {

@@ -27,7 +27,9 @@ public class Triangle extends Shape {
         BigDecimal sideA = this.getParametersMap().get("sideA");
         BigDecimal sideB = this.getParametersMap().get("sideB");
         BigDecimal sideC = this.getParametersMap().get("sideC");
-        BigDecimal halfPerimeter = this.getPerimeter().divide(BigDecimal.valueOf(2), MathContext.DECIMAL32);
+
+        BigDecimal halfPerimeter = (sideA.add(sideB).add(sideC)).divide(BigDecimal.valueOf(2), MathContext.DECIMAL32);
+
         BigDecimal area = halfPerimeter
                 .multiply(halfPerimeter.subtract(sideA))
                 .multiply(halfPerimeter.subtract(sideB))

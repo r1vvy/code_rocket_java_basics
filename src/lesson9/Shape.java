@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public abstract class Shape {
+    private Integer id;
     private BigDecimal perimeter;
     private BigDecimal area;
     private HashMap<String, BigDecimal> parametersMap = new HashMap<>();
@@ -15,12 +16,20 @@ public abstract class Shape {
     public Shape() {
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public BigDecimal getPerimeter() {
         return perimeter;
     }
 
     public void setPerimeter(BigDecimal perimeter) {
-        if(perimeter.compareTo(BigDecimal.ZERO) == 1)
+        if(perimeter.compareTo(BigDecimal.ZERO) < 1)
             throw new ShapeValidationException("Perimeter cannot be less than ZERO");
         this.perimeter = perimeter;
     }
@@ -30,7 +39,7 @@ public abstract class Shape {
     }
 
     public void setArea(BigDecimal area) {
-        if(area.compareTo(BigDecimal.ZERO) == 1)
+        if(area.compareTo(BigDecimal.ZERO) < 1)
             throw new ShapeValidationException("Area cannot be less than ZERO");
         this.area = area;
     }
