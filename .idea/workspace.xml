@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeChoiceMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeChoiceMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeChoiceRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeChoiceRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeChoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeChoiceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeCreationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeCreationMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeCreationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeCreationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserInput.java" afterDir="false" />
     </list>

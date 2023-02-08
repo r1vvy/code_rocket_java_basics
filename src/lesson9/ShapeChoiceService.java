@@ -8,7 +8,7 @@ public class ShapeChoiceService {
         this.shapeService = shapeService;
     }
 
-    public Shape chooseShapeFromUserInput(ShapeChoiceRequest request) {
+    public Shape chooseShape(ShapeChoiceRequest request) {
         return this.shapeService.getShapeById(request.getChoice());
     }
 }

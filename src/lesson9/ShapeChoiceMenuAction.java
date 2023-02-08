@@ -23,7 +23,7 @@ public class ShapeChoiceMenuAction implements MenuAction {
     public void execute() {
         try {
             ShapeChoiceRequest shapeChoiceRequest = userInput.getShapeChoiceRequestFromUser();
-            Shape shape = shapeChoiceService.chooseShapeFromUserInput(shapeChoiceRequest);
+            Shape shape = shapeChoiceService.chooseShape(shapeChoiceRequest);
             System.out.println("Shape choice: " + shape.toString());
             // TODO: executes ShapeOperationMenuAction
         } catch (ShapeNotFoundException e) {

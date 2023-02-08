@@ -19,10 +19,9 @@ public class ShapeCreationMenuAction implements MenuAction{
     public void execute() {
         try {
             ShapeCreationRequest request = userInput.getShapeCreationRequestFromUser();
-            Shape shape = shapeCreationService.createShapeFromUserInput(request);
+            Shape shape = this.shapeCreationService.createShapeFromUserInput(request);
             // TODO separate creation from saving
             this.shapeCreationService.saveShapeFromUserInput(request);
-
             System.out.println("Shape created successfully!");
             System.out.println("New shape: " + shape.toString());
         } catch (ShapeValidationException | IllegalArgumentException e) {

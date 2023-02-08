@@ -23,7 +23,8 @@ public class UserInput {
         
         System.out.println("Please choose shape: ");
         printAllShapeClassSimpleNames();
-        int shapeChoice = getShapeTypeChoice();
+
+        int shapeChoice = getChoice();
 
         Shape newShape = shapeTypes.get(shapeChoice);
         HashMap<String, BigDecimal> parameters = getShapeCreationParametersFromUser(newShape);
@@ -33,15 +34,8 @@ public class UserInput {
     public ShapeChoiceRequest getShapeChoiceRequestFromUser(){
         // TODO: If repo doesnt contain any shapes, throw an exception.
         this.shapeRepo.printRepository();
+        System.out.println("Pick a shape to do operations on: ");
         return new ShapeChoiceRequest(getChoice());
-    }
-    private int getShapeTypeChoice() {
-        Scanner scanner = new Scanner(System.in);
-        int shapeChoice = scanner.nextInt();
-        if(shapeChoice < 0 || shapeChoice >= shapeTypes.size()) {
-            throw new IllegalArgumentException("Invalid shape type choice");
-        }
-        return shapeChoice;
     }
 
     private int getChoice() {
