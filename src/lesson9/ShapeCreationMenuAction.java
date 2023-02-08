@@ -20,7 +20,6 @@ public class ShapeCreationMenuAction implements MenuAction{
         try {
             ShapeCreationRequest request = userInput.getShapeCreationRequestFromUser();
             Shape shape = this.shapeCreationService.createShapeFromUserInput(request);
-            // TODO separate creation from saving
             this.shapeCreationService.saveShapeFromUserInput(request);
             System.out.println("Shape created successfully!");
             System.out.println("New shape: " + shape.toString());

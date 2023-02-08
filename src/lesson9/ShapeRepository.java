@@ -19,13 +19,12 @@ public class ShapeRepository {
     public Optional<Shape> findShapeById(Integer id) {
         return Optional.ofNullable(repository.get(id));
     }
-    public Map<Integer, Shape> getRepository() {
-        return repository;
+    
+    public boolean isRepositoryEmpty() {
+        return this.repository.isEmpty();
     }
 
-    // TODO: if not found, throw exception
     public void printRepository() {
-
         this.repository.forEach((key, value) -> System.out.println(key + ". " + value));
     }
 }
