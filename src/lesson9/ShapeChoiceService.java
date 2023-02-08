@@ -1,8 +1,14 @@
 package lesson9;
 
+import java.util.Optional;
+
 public class ShapeChoiceService {
+    private final ShapeService shapeService;
+    public ShapeChoiceService(ShapeService shapeService) {
+        this.shapeService = shapeService;
+    }
 
     public Shape chooseShapeFromUserInput(ShapeChoiceRequest request) {
-        return request.getShape();
+        return this.shapeService.getShapeById(request.getChoice());
     }
 }

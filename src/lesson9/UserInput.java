@@ -10,17 +10,19 @@ import java.util.Scanner;
 public class UserInput {
     private final List<Shape> shapeTypes;
     private ShapeRepository shapeRepo;
+    private final ShapeService shapeService;
 
     public UserInput(List<Shape> shapeTypes, ShapeRepository shapeRepo) {
         this.shapeTypes = shapeTypes;
         this.shapeRepo = shapeRepo;
+
+        this.shapeService = new ShapeService(this.shapeRepo);
     }
 
     public ShapeCreationRequest getShapeCreationRequestFromUser() {
         
         System.out.println("Please choose shape: ");
         printAllShapeClassSimpleNames();
-
         int shapeChoice = getShapeTypeChoice();
 
         Shape newShape = shapeTypes.get(shapeChoice);
@@ -28,14 +30,10 @@ public class UserInput {
 
         return new ShapeCreationRequest(newShape, parameters);
     }
-    public ShapeChoiceRequest getShapeChoiceRequestFromUser() throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        if(this.shapeRepo.getRepository().isEmpty()) {
-            throw new Exception("There are no existing shapes.");
-        } else {
-            this.shapeRepo.printRepository();
-            return new ShapeChoiceRequest(getExistingShapeChoice());
-        }
+    public ShapeChoiceRequest getShapeChoiceRequestFromUser(){
+        // TODO: If repo doesnt contain any shapes, throw an exception.
+        this.shapeRepo.printRepository();
+        return new ShapeChoiceRequest(getChoice());
     }
     private int getShapeTypeChoice() {
         Scanner scanner = new Scanner(System.in);
@@ -46,11 +44,11 @@ public class UserInput {
         return shapeChoice;
     }
 
-    private Shape getExistingShapeChoice() {
+    private int getChoice() {
         Scanner scanner = new Scanner(System.in);
-        Integer choice = scanner.nextInt();
+        int choice = scanner.nextInt();
 
-        return shapeRepo.findShapeById(choice);
+        return choice;
     }
 
     private HashMap<String, BigDecimal> getShapeCreationParametersFromUser(Shape shape) {

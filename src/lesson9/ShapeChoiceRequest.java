@@ -1,13 +1,15 @@
 package lesson9;
 
-public class ShapeChoiceRequest {
-    private final Shape shape;
+import java.util.Optional;
 
-    public ShapeChoiceRequest(Shape shape) {
-        this.shape = shape;
+public class ShapeChoiceRequest {
+    private final int choice;
+
+    public ShapeChoiceRequest(int choice) {
+        this.choice = choice;
     }
 
-    public Shape getShape() {
-        return shape;
+    public int getChoice() {
+        return choice;
     }
 }

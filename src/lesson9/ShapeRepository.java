@@ -22,6 +22,8 @@ public class ShapeRepository {
     public Map<Integer, Shape> getRepository() {
         return repository;
     }
+
+    // TODO: if not found, throw exception
     public void printRepository() {
         this.repository.forEach((key, value) -> System.out.println(key + ". " + value));
     }

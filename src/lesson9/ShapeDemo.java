@@ -7,9 +7,11 @@ public class ShapeDemo {
         List<Shape> shapeTypes = List.of(new Circle() , new Triangle(), new Rectangle());
         ShapeRepository shapeRepository = new ShapeRepository();
         UserInput userInput = new UserInput(shapeTypes, shapeRepository);
-        
-        ShapeCreationService shapeCreationService = new ShapeCreationService();
-        ShapeChoiceService shapeChoiceService = new ShapeChoiceService();
+
+        ShapeService shapeService = new ShapeService(shapeRepository);
+
+        ShapeCreationService shapeCreationService = new ShapeCreationService(shapeService);
+        ShapeChoiceService shapeChoiceService = new ShapeChoiceService(shapeService);
 
         List<MenuAction> actions = List.of(
             new ShapeCreationMenuAction(userInput, shapeCreationService),

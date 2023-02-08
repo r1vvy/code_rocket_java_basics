@@ -25,10 +25,9 @@ public class ShapeChoiceMenuAction implements MenuAction {
             ShapeChoiceRequest shapeChoiceRequest = userInput.getShapeChoiceRequestFromUser();
             Shape shape = shapeChoiceService.chooseShapeFromUserInput(shapeChoiceRequest);
             System.out.println("Shape choice: " + shape.toString());
-
             // TODO: executes ShapeOperationMenuAction
-        } catch (Exception e) {
-            System.err.println("There are no shapes added currently.");
+        } catch (ShapeNotFoundException e) {
+            System.err.println(e.getMessage());
             System.err.println("Please CREATE a new shape!");
         }
     }
