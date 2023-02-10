@@ -7,8 +7,8 @@ import java.util.*;
 public class ShapeRepository {
     private Integer shapeIdSequence = 1;
     private final Map<Integer, Shape> repository = new HashMap<>();
-    private BigDecimal totalArea;
-    private BigDecimal totalPerimeter;
+    private BigDecimal totalArea = new BigDecimal("0");
+    private BigDecimal totalPerimeter = new BigDecimal("0");
 
     public Shape save(Shape shape) {
         shape.setId(shapeIdSequence);

@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
+      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeOperationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676019307268</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
+      <created>1676019763361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676019763361</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

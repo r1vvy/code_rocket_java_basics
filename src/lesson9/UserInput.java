@@ -36,7 +36,7 @@ public class UserInput {
     }
     public ShapeChoiceRequest getShapeChoiceRequestFromUser() {
         // TODO: If repo doesnt contain any shapes, throw an exception.
-        this.shapeService.printRepository();
+        this.shapeService.printAllShapesFromRepo();
         System.out.println("Pick a shape to do operations on: ");
         return new ShapeChoiceRequest(getChoice());
     }
@@ -81,5 +81,9 @@ public class UserInput {
 
     private BigDecimal getBigDecimalInput() {
         return scanner.nextBigDecimal();
+    }
+
+    public int getMenuChoice() {
+        return scanner.nextInt();
     }
 }

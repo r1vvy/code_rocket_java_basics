@@ -21,6 +21,8 @@ public class ShapeOperationMenuAction implements MenuAction {
         switch (actionChoice) {
             case 1 -> shapeOperationService.calculatePerimeterOfShapeFromUserInput(shapeOperationRequest);
             case 2 -> shapeOperationService.calculateAreaOfShapeFromUserInput(shapeOperationRequest);
+            case 3 -> shapeOperationService.addShapePerimeterFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
+            case 4 -> shapeOperationService.addShapeAreaFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
             default -> {
             }
         }

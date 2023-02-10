@@ -16,7 +16,7 @@ public class UserMenu {
         while (true) {
             printMenu();
             try {
-                int choice = userInput.getNumber();
+                int choice = userInput.getMenuChoice();
                 if (choice < 0 || choice >= actions.size()) {
                     throw new IllegalArgumentException("Invalid choice");
                 } else {
