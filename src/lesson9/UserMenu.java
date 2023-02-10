@@ -2,6 +2,7 @@ package lesson9;
 
 import lesson9.actions.MenuAction;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 public class UserMenu {
@@ -16,21 +17,24 @@ public class UserMenu {
     public void start() {
         while (true) {
             printMenu();
-            int choice = userInput.getMenuChoice();
+            try {
+                int choice = userInput.getIntInput();
 
-            // TODO validate UserInput and then here catch IllegalArgument or InputMismatch Exceptions;
-            if (choice < 0 || choice >= actions.size()) {
-                System.err.println("Try again!");
-            } else {
                 MenuAction action = actions.get(choice);
                 action.execute();
+            } catch(InputMismatchException | ArrayIndexOutOfBoundsException e) {
+                System.out.println("Invalid input. Please choose from the options below:");
+                System.out.println();
             }
         }
     }
 
     private void printMenu() {
+        System.out.println("====================================");
         for (int i = 0; i < actions.size(); i++) {
             System.out.println(i + "." + actions.get(i).getName());
         }
+        System.out.println("====================================");
+
     }
 }

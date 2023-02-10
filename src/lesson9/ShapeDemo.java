@@ -11,6 +11,7 @@ import lesson9.services.ShapeChoiceService;
 import lesson9.services.ShapeCreationService;
 import lesson9.services.ShapeOperationService;
 import lesson9.services.ShapeService;
+import lesson9.validators.UserInputValidator;
 
 import java.util.List;
 
@@ -18,11 +19,14 @@ public class ShapeDemo {
     public static void main(String[] args) {
         List<Shape> shapeTypes = List.of(new Circle() , new Triangle(), new Rectangle());
         ShapeRepository shapeRepository = new ShapeRepository();
+
+        UserInputValidator userInputValidator = new UserInputValidator();
+
         UserInput userInput = new UserInput(shapeTypes, shapeRepository);
 
         ShapeService shapeService = new ShapeService(shapeRepository);
 
-        ShapeCreationService shapeCreationService = new ShapeCreationService(shapeService);
+        ShapeCreationService shapeCreationService = new ShapeCreationService(shapeService, userInputValidator);
         ShapeChoiceService shapeChoiceService = new ShapeChoiceService(shapeService);
         ShapeOperationService shapeOperationService = new ShapeOperationService(shapeService);
 

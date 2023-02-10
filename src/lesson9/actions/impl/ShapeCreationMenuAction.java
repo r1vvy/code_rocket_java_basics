@@ -7,6 +7,8 @@ import lesson9.models.Shape;
 import lesson9.requests.ShapeCreationRequest;
 import lesson9.services.ShapeCreationService;
 
+import java.util.InputMismatchException;
+
 public class ShapeCreationMenuAction implements MenuAction {
     
     private final UserInput userInput;
@@ -30,8 +32,10 @@ public class ShapeCreationMenuAction implements MenuAction {
             this.shapeCreationService.saveShapeFromUserInput(request);
             System.out.println("Shape created successfully!");
             System.out.println("New shape: " + shape.toString());
-        } catch (ShapeValidationException | IllegalArgumentException e) {
-            System.err.println(e.getMessage());
+        } catch (IllegalArgumentException | InputMismatchException e) {
+            if(e.getMessage() != null) {
+                System.err.println(e.getMessage());
+            }
             System.err.println("Please try again!");
         }
     }
