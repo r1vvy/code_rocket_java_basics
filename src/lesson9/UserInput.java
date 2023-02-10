@@ -8,7 +8,6 @@ import java.util.Scanner;
 // TODO: exceptions should be thrown in business logic services.
 public class UserInput {
     private final List<Shape> shapeTypes;
-    private ShapeRepository shapeRepo;
     private final ShapeService shapeService;
     private final Scanner scanner;
 
@@ -18,10 +17,6 @@ public class UserInput {
         this.shapeTypes = shapeTypes;
         this.shapeService = new ShapeService(shapeRepo);
         this.scanner = new Scanner(System.in);
-    }
-
-    public Shape getChosenShape() {
-        return chosenShape;
     }
 
     public void setChosenShape(Shape chosenShape) {
@@ -41,7 +36,7 @@ public class UserInput {
     }
     public ShapeChoiceRequest getShapeChoiceRequestFromUser() {
         // TODO: If repo doesnt contain any shapes, throw an exception.
-        this.shapeRepo.printRepository();
+        this.shapeService.printRepository();
         System.out.println("Pick a shape to do operations on: ");
         return new ShapeChoiceRequest(getChoice());
     }
@@ -58,14 +53,14 @@ public class UserInput {
         System.out.println("Actions: ");
         System.out.println("1. Calculate perimeter");
         System.out.println("2. Calculate area");
-        // TODO: Add: Add to total actions
+        System.out.println("3. Add to total perimeter");
+        System.out.println("4. Add to total area");
     }
 
     private int getChoice() {
         Scanner scanner = new Scanner(System.in);
-        int choice = scanner.nextInt();
 
-        return choice;
+        return scanner.nextInt();
     }
 
     private HashMap<String, BigDecimal> getShapeCreationParametersFromUser(Shape shape) {
@@ -82,10 +77,6 @@ public class UserInput {
         for (int i = 0; i < shapeTypes.size(); i++) {
             System.out.println(i + "." + shapeTypes.get(i).getClass().getSimpleName());
         }
-    }
-
-    private int getIntInput() {
-        return scanner.nextInt();
     }
 
     private BigDecimal getBigDecimalInput() {

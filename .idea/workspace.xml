@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException.">
+    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException." />
+    <MESSAGE value="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
