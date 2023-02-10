@@ -12,11 +12,21 @@ public class UserInput {
     private ShapeRepository shapeRepo;
     private final ShapeService shapeService;
 
+    private Shape chosenShape;
+
     public UserInput(List<Shape> shapeTypes, ShapeRepository shapeRepo) {
         this.shapeTypes = shapeTypes;
         this.shapeRepo = shapeRepo;
 
         this.shapeService = new ShapeService(this.shapeRepo);
+    }
+
+    public Shape getChosenShape() {
+        return chosenShape;
+    }
+
+    public void setChosenShape(Shape chosenShape) {
+        this.chosenShape = chosenShape;
     }
 
     public ShapeCreationRequest getShapeCreationRequestFromUser() {
@@ -31,11 +41,26 @@ public class UserInput {
 
         return new ShapeCreationRequest(newShape, parameters);
     }
-    public ShapeChoiceRequest getShapeChoiceRequestFromUser(){
+    public ShapeChoiceRequest getShapeChoiceRequestFromUser() {
         // TODO: If repo doesnt contain any shapes, throw an exception.
         this.shapeRepo.printRepository();
         System.out.println("Pick a shape to do operations on: ");
         return new ShapeChoiceRequest(getChoice());
+    }
+
+    public ShapeOperationRequest getShapeOperationRequestFromUser() {
+        System.out.println("Choose action: ");
+        printAllShapeActions();
+        int choice = getChoice();
+
+        return new ShapeOperationRequest(choice, this.chosenShape);
+    }
+
+    private void printAllShapeActions() {
+        System.out.println("Actions: ");
+        System.out.println("1. Calculate perimeter");
+        System.out.println("2. Calculate area");
+        // TODO: Add: Add to total actions
     }
 
     private int getChoice() {

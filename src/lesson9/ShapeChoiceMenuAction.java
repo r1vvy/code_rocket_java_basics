@@ -3,15 +3,12 @@ package lesson9;
 public class ShapeChoiceMenuAction implements MenuAction {
     private final UserInput userInput;
     private final ShapeChoiceService shapeChoiceService;
-    private Shape chosenShape;
+    private final ShapeOperationService shapeOperationService;
 
-    public ShapeChoiceMenuAction(UserInput userInput, ShapeChoiceService shapeChoiceService) {
+    public ShapeChoiceMenuAction(UserInput userInput, ShapeChoiceService shapeChoiceService, ShapeOperationService shapeOperationService) {
         this.userInput = userInput;
         this.shapeChoiceService = shapeChoiceService;
-    }
-
-    public Shape getChosenShape() {
-        return chosenShape;
+        this.shapeOperationService = shapeOperationService;
     }
 
     @Override
@@ -25,7 +22,9 @@ public class ShapeChoiceMenuAction implements MenuAction {
             ShapeChoiceRequest shapeChoiceRequest = userInput.getShapeChoiceRequestFromUser();
             Shape shape = shapeChoiceService.chooseShape(shapeChoiceRequest);
             System.out.println("Shape choice: " + shape.toString());
-            // TODO: executes ShapeOperationMenuAction
+            this.userInput.setChosenShape(shape);
+            ShapeOperationMenuAction shapeOperationMenuAction = new ShapeOperationMenuAction(userInput, shapeOperationService);
+            shapeOperationMenuAction.execute();
         } catch (ShapeNotFoundException e) {
             System.err.println(e.getMessage());
             System.err.println("Please CREATE a new shape!");

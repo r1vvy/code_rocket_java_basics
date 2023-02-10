@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeUpdateException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeCalculatorImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeChoiceMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeChoiceMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeChoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeChoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeCreationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeCreationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +59,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="lesson9" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/lesson2/task10" />
       <recent name="$PROJECT_DIR$/src/lesson2/task6" />

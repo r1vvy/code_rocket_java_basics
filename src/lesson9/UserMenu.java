@@ -22,9 +22,6 @@ public class UserMenu {
                 } else {
                     MenuAction action = actions.get(choice);
                     // TODO: do some calculations with chosen shape.
-                    /*if(action.getName().equalsIgnoreCase("Calculate")) {
-
-                    }*/
                     action.execute();
                 }
             } catch (IllegalArgumentException | InputMismatchException e) {

@@ -12,10 +12,11 @@ public class ShapeDemo {
 
         ShapeCreationService shapeCreationService = new ShapeCreationService(shapeService);
         ShapeChoiceService shapeChoiceService = new ShapeChoiceService(shapeService);
+        ShapeOperationService shapeOperationService = new ShapeOperationService(shapeService);
 
         List<MenuAction> actions = List.of(
             new ShapeCreationMenuAction(userInput, shapeCreationService),
-            new ShapeChoiceMenuAction(userInput, shapeChoiceService),
+            new ShapeChoiceMenuAction(userInput, shapeChoiceService, shapeOperationService),
             new ExitMenuAction()
         );
 
