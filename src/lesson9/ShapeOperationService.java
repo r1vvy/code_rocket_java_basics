@@ -23,11 +23,11 @@ public class ShapeOperationService {
     public void addShapePerimeterFromUserInputToTotalPerimeterInRepo(ShapeOperationRequest shapeOperationRequest) {
         Shape shape = shapeOperationRequest.getShape();
 
-        this.shapeService.addPerimeterToTotalFromRepo(shape);
+        this.shapeService.addToTotalPerimeterFromRepo(shape.getPerimeter());
     }
     public void addShapeAreaFromUserInputToTotalPerimeterInRepo(ShapeOperationRequest shapeOperationRequest) {
         Shape shape = shapeOperationRequest.getShape();
 
-        this.shapeService.addAreaToTotalFromRepo(shape);
+        this.shapeService.addToTotalAreaFromRepo(shape.getArea());
     }
 }

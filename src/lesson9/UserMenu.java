@@ -15,20 +15,14 @@ public class UserMenu {
     public void start() {
         while (true) {
             printMenu();
-            try {
-                int choice = userInput.getMenuChoice();
-                if (choice < 0 || choice >= actions.size()) {
-                    throw new IllegalArgumentException("Invalid choice");
-                } else {
-                    MenuAction action = actions.get(choice);
-                    // TODO: do some calculations with chosen shape.
-                    action.execute();
-                }
-            } catch (IllegalArgumentException | InputMismatchException e) {
-                if(e.getMessage() != null) {
-                    System.err.println(e.getMessage());
-                }
+            int choice = userInput.getMenuChoice();
+
+            // TODO validate UserInput and then here catch IllegalArgument or InputMismatch Exceptions;
+            if (choice < 0 || choice >= actions.size()) {
                 System.err.println("Try again!");
+            } else {
+                MenuAction action = actions.get(choice);
+                action.execute();
             }
         }
     }

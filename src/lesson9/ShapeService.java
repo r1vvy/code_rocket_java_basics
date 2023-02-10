@@ -1,5 +1,7 @@
 package lesson9;
 
+import java.math.BigDecimal;
+
 public class ShapeService {
     private final ShapeRepository shapeRepo;
 
@@ -25,19 +27,11 @@ public class ShapeService {
         }
     }
 
-    public void addPerimeterToTotalFromRepo(Shape shape) {
-        if(shape != null && shapeRepo.doesShapeExist(shape) && shape.getPerimeter() != null) {
-            shapeRepo.getTotalPerimeter().add(shape.getPerimeter());
-        } else {
-            new ShapeOperationException("Cannot add to total perimeter because the Shape's perimeter has no reference");
-        }
+    public void addToTotalAreaFromRepo(BigDecimal numberToAdd) {
+        this.shapeRepo.addToTotalArea(numberToAdd);
     }
-    public void addAreaToTotalFromRepo(Shape shape) {
-        if(shape != null && shapeRepo.doesShapeExist(shape) && shape.getPerimeter() != null) {
-            shapeRepo.getTotalArea().add(shape.getArea());
-        } else {
-            new ShapeOperationException("Cannot add to total area because the Shape's area has no reference");
-        }
+    public void addToTotalPerimeterFromRepo(BigDecimal numberToAdd) {
+        this.shapeRepo.addToTotalPerimeter(numberToAdd);
     }
 
     public void printAllShapesFromRepo() {
@@ -46,5 +40,12 @@ public class ShapeService {
         } else {
             this.shapeRepo.printRepository();
         }
+    }
+
+    public void printTotalPerimeter() {
+        System.out.println("Total perimeter is: " + this.shapeRepo.getTotalPerimeter().toString());
+    }
+    public void printTotalArea() {
+        System.out.println("Total area is: " + shapeRepo.getTotalArea().toString());
     }
 }

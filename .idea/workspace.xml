@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
-      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson9/RepoTotalAreaMenuAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson9/RepoTotalPerimeterMenuAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeOperationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeService.java" afterDir="false" />
@@ -34,7 +35,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2K5GoRIIipzmuuxu6TvYceeSza8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

@@ -15,6 +15,8 @@ public class ShapeDemo {
         ShapeOperationService shapeOperationService = new ShapeOperationService(shapeService);
 
         List<MenuAction> actions = List.of(
+                new RepoTotalPerimeterMenuAction(shapeService),
+            new RepoTotalAreaMenuAction(shapeService),
             new ShapeCreationMenuAction(userInput, shapeCreationService),
             new ShapeChoiceMenuAction(userInput, shapeChoiceService, shapeOperationService),
             new ExitMenuAction()

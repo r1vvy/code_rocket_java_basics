@@ -23,6 +23,10 @@ public class UserInput {
         this.chosenShape = chosenShape;
     }
 
+    public Shape getChosenShape() {
+        return chosenShape;
+    }
+
     public ShapeCreationRequest getShapeCreationRequestFromUser() {
         System.out.println("Please choose shape: ");
         printAllShapeClassSimpleNames();

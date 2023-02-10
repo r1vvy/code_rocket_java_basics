@@ -7,8 +7,8 @@ import java.util.*;
 public class ShapeRepository {
     private Integer shapeIdSequence = 1;
     private final Map<Integer, Shape> repository = new HashMap<>();
-    private BigDecimal totalArea = new BigDecimal("0");
-    private BigDecimal totalPerimeter = new BigDecimal("0");
+    private BigDecimal totalArea = BigDecimal.ZERO;
+    private BigDecimal totalPerimeter = BigDecimal.ZERO;
 
     public Shape save(Shape shape) {
         shape.setId(shapeIdSequence);
@@ -24,19 +24,17 @@ public class ShapeRepository {
     }
 
     public BigDecimal getTotalArea() {
-        return totalArea;
+        return this.totalArea;
     }
-
-    public void setTotalArea(BigDecimal totalArea) {
-        this.totalArea = totalArea;
-    }
-
     public BigDecimal getTotalPerimeter() {
-        return totalPerimeter;
+        return this.totalPerimeter;
     }
 
-    public void setTotalPerimeter(BigDecimal totalPerimeter) {
-        this.totalPerimeter = totalPerimeter;
+    public void addToTotalPerimeter(BigDecimal decimal) {
+       this.totalPerimeter =  this.totalPerimeter.add(decimal);
+    }
+    public void addToTotalArea(BigDecimal decimal) {
+        this.totalArea = this.totalArea.add(decimal);
     }
 
     public Optional<Shape> findShapeById(Integer id) {
@@ -45,9 +43,7 @@ public class ShapeRepository {
     public Optional<Shape> findShape(Shape shape) {
         return Optional.ofNullable(repository.get(shape));
     }
-    public Map<Integer, Shape> getRepository() {
-        return repository;
-    }
+
     public boolean isRepositoryEmpty() {
         return this.repository.isEmpty();
     }
