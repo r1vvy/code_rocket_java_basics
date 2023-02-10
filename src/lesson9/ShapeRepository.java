@@ -23,16 +23,24 @@ public class ShapeRepository {
     public Optional<Shape> findShapeById(Integer id) {
         return Optional.ofNullable(repository.get(id));
     }
-
     public Optional<Shape> findShape(Shape shape) {
         return Optional.ofNullable(repository.get(shape));
     }
-
+    public Map<Integer, Shape> getRepository() {
+        return repository;
+    }
+    public Optional<Shape> findShape(Shape shape) {
+        return Optional.ofNullable(repository.get(shape));
+    }
+    public boolean isRepositoryEmpty() {
+        return this.repository.isEmpty();
+    }
     public boolean doesShapeExist(Shape shape) {
         return repository.containsValue(shape);
     }
-    public void printRepository() {
 
+    // TODO: if not found, throw exception
+    public void printRepository() {
         this.repository.forEach((key, value) -> System.out.println(key + ". " + value));
     }
 }

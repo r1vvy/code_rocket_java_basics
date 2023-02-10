@@ -26,6 +26,10 @@ public class ShapeService {
     }
 
     public void printRepository() {
-        shapeRepo.printRepository();
+        if(this.shapeRepo.isRepositoryEmpty()) {
+            throw new ShapeRepositoryEmptyException("Shape repository is empty");
+        } else {
+            this.shapeRepo.printRepository();
+        }
     }
 }
