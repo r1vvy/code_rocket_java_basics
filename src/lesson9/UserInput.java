@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-// TODO: exceptions should be thrown in business logic services.
 public class UserInput {
     private final List<Shape> shapeTypes;
     private final ShapeService shapeService;
@@ -44,7 +43,6 @@ public class UserInput {
         return new ShapeCreationRequest(newShape, parameters);
     }
     public ShapeChoiceRequest getShapeChoiceRequestFromUser() {
-        // TODO: If repo doesnt contain any shapes, throw an exception.
         System.out.println("====================================");
         this.shapeService.printAllShapesFromRepo();
         System.out.println("====================================");
@@ -55,7 +53,9 @@ public class UserInput {
 
     public ShapeOperationRequest getShapeOperationRequestFromUser() {
         System.out.println("Choose action: ");
+        System.out.println("====================================");
         printAllShapeActions();
+        System.out.println("====================================");
 
         return new ShapeOperationRequest(getIntInput(), this.chosenShape);
     }

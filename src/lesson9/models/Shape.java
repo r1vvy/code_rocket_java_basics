@@ -1,7 +1,5 @@
 package lesson9.models;
 
-import lesson9.exceptions.ShapeValidationException;
-
 import java.math.BigDecimal;
 import java.util.HashMap;
 

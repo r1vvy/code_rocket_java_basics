@@ -21,16 +21,20 @@ public class ShapeOperationMenuAction implements MenuAction {
 
     @Override
     public void execute() {
-        // TODO: catch NullPointerException
-        ShapeOperationRequest shapeOperationRequest = this.userInput.getShapeOperationRequestFromUser();
-        int actionChoice = shapeOperationRequest.getActionChoice();
-        switch (actionChoice) {
-            case 1 -> shapeOperationService.calculatePerimeterOfShapeFromUserInput(shapeOperationRequest);
-            case 2 -> shapeOperationService.calculateAreaOfShapeFromUserInput(shapeOperationRequest);
-            case 3 -> shapeOperationService.addShapePerimeterFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
-            case 4 -> shapeOperationService.addShapeAreaFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
-            default -> throw new IllegalArgumentException("Invalid input");
+        try {
+            ShapeOperationRequest shapeOperationRequest = this.userInput.getShapeOperationRequestFromUser();
+            int actionChoice = shapeOperationRequest.getActionChoice();
+            
+            switch (actionChoice) {
+                case 1 -> shapeOperationService.calculatePerimeterOfShapeFromUserInput(shapeOperationRequest);
+                case 2 -> shapeOperationService.calculateAreaOfShapeFromUserInput(shapeOperationRequest);
+                case 3 -> shapeOperationService.addShapePerimeterFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
+                case 4 -> shapeOperationService.addShapeAreaFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
+                default -> throw new IllegalArgumentException("Invalid input");
+            }
+            System.out.println("Updated succesfully!");
+        } catch(NullPointerException e) {
+            System.err.println("Cannot do this operation!");
         }
-        System.out.println("Updated succesfully!");
     }
 }

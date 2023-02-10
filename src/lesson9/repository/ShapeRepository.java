@@ -5,7 +5,6 @@ import lesson9.models.Shape;
 import java.math.BigDecimal;
 import java.util.*;
 
-// TODO: edit repo like in lesson10 in code rocket java basics
 public class ShapeRepository {
     private Integer shapeIdSequence = 1;
     private final Map<Integer, Shape> repository = new HashMap<>();
@@ -53,7 +52,6 @@ public class ShapeRepository {
         return repository.containsValue(shape);
     }
 
-    // TODO: if not found, throw exception
     public void printRepository() {
         this.repository.forEach((key, value) -> System.out.println(key + ". " + value));
     }
