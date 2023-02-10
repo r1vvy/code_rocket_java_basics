@@ -1,6 +1,8 @@
-package lesson9;
+package lesson9.actions.impl;
 
-public class ExitMenuAction implements MenuAction{
+import lesson9.actions.MenuAction;
+
+public class ExitMenuAction implements MenuAction {
     @Override
     public String getName() {
         return "Exit";

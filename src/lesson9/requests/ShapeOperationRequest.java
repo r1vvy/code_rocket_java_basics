@@ -1,4 +1,6 @@
-package lesson9;
+package lesson9.requests;
+
+import lesson9.models.Shape;
 
 public class ShapeOperationRequest {
     private final Shape shape;

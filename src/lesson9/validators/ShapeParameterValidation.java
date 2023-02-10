@@ -1,4 +1,7 @@
-package lesson9;
+package lesson9.validators;
+
+import lesson9.exceptions.ShapeValidationException;
+import lesson9.models.Shape;
 
 public class ShapeParameterValidation {
     

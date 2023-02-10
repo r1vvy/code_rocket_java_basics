@@ -1,6 +1,9 @@
-package lesson9;
+package lesson9.actions.impl;
 
-public class RepoTotalPerimeterMenuAction implements MenuAction{
+import lesson9.services.ShapeService;
+import lesson9.actions.MenuAction;
+
+public class RepoTotalPerimeterMenuAction implements MenuAction {
     private final ShapeService shapeService;
     public RepoTotalPerimeterMenuAction(ShapeService shapeService) {
         this.shapeService = shapeService;

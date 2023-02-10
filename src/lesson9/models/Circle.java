@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.models;
 
 import java.math.BigDecimal;
 import java.util.Objects;

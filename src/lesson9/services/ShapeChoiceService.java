@@ -1,6 +1,7 @@
-package lesson9;
+package lesson9.services;
 
-import java.util.Optional;
+import lesson9.models.Shape;
+import lesson9.requests.ShapeChoiceRequest;
 
 public class ShapeChoiceService {
     private final ShapeService shapeService;

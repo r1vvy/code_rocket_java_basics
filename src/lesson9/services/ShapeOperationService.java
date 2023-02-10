@@ -1,4 +1,7 @@
-package lesson9;
+package lesson9.services;
+
+import lesson9.models.Shape;
+import lesson9.requests.ShapeOperationRequest;
 
 public class ShapeOperationService {
     private final ShapeService shapeService;

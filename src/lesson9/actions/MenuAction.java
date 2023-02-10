@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.actions;
 
 public interface MenuAction {
     String getName();

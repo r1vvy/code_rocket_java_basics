@@ -1,5 +1,12 @@
 package lesson9;
 
+import lesson9.models.Shape;
+import lesson9.repository.ShapeRepository;
+import lesson9.requests.ShapeChoiceRequest;
+import lesson9.requests.ShapeCreationRequest;
+import lesson9.requests.ShapeOperationRequest;
+import lesson9.services.ShapeService;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;

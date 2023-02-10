@@ -1,4 +1,9 @@
-package lesson9;
+package lesson9.actions.impl;
+
+import lesson9.requests.ShapeOperationRequest;
+import lesson9.services.ShapeOperationService;
+import lesson9.UserInput;
+import lesson9.actions.MenuAction;
 
 public class ShapeOperationMenuAction implements MenuAction {
     private final UserInput userInput;

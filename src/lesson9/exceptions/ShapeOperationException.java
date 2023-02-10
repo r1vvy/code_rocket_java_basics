@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.exceptions;
 
 public class ShapeOperationException extends RuntimeException {
     public ShapeOperationException(String message) {

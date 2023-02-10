@@ -1,8 +1,9 @@
-package lesson9;
+package lesson9.models;
+
+import lesson9.exceptions.ShapeValidationException;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
-import java.util.List;
 
 public abstract class Shape {
     private Integer id;
@@ -10,8 +11,8 @@ public abstract class Shape {
     private BigDecimal area;
     private HashMap<String, BigDecimal> parametersMap = new HashMap<>();
 
-    abstract void calculateArea();
-    abstract void calculatePerimeter();
+    public abstract void calculateArea();
+    public abstract void calculatePerimeter();
 
     public Shape() {
     }

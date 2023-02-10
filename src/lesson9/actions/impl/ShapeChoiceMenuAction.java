@@ -1,4 +1,12 @@
-package lesson9;
+package lesson9.actions.impl;
+
+import lesson9.*;
+import lesson9.actions.MenuAction;
+import lesson9.exceptions.ShapeNotFoundException;
+import lesson9.models.Shape;
+import lesson9.requests.ShapeChoiceRequest;
+import lesson9.services.ShapeChoiceService;
+import lesson9.services.ShapeOperationService;
 
 public class ShapeChoiceMenuAction implements MenuAction {
     private final UserInput userInput;

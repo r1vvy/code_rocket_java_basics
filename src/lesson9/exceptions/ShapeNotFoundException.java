@@ -1,4 +1,4 @@
-package lesson9;
+package lesson9.exceptions;
 
 public class ShapeNotFoundException extends RuntimeException {
     public ShapeNotFoundException(String message) {

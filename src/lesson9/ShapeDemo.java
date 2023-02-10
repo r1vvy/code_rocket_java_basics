@@ -1,5 +1,17 @@
 package lesson9;
 
+import lesson9.actions.MenuAction;
+import lesson9.actions.impl.*;
+import lesson9.models.Circle;
+import lesson9.models.Rectangle;
+import lesson9.models.Shape;
+import lesson9.models.Triangle;
+import lesson9.repository.ShapeRepository;
+import lesson9.services.ShapeChoiceService;
+import lesson9.services.ShapeCreationService;
+import lesson9.services.ShapeOperationService;
+import lesson9.services.ShapeService;
+
 import java.util.List;
 
 public class ShapeDemo {

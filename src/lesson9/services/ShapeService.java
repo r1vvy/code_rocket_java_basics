@@ -1,4 +1,10 @@
-package lesson9;
+package lesson9.services;
+
+import lesson9.exceptions.ShapeNotFoundException;
+import lesson9.exceptions.ShapeUpdateException;
+import lesson9.models.Shape;
+import lesson9.repository.ShapeRepository;
+import lesson9.repository.ShapeRepositoryEmptyException;
 
 import java.math.BigDecimal;
 
