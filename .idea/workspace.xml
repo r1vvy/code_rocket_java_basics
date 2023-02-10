@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
-      <change afterPath="$PROJECT_DIR$/src/lesson9/validators/UserInputValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeCreationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeCreationMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/models/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/models/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/services/ShapeCreationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/services/ShapeCreationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/validators/ShapeParameterValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeChoiceMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeChoiceMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeOperationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeOperationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/validators/UserInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/validators/UserInputValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,6 +4,7 @@ import lesson9.*;
 import lesson9.actions.MenuAction;
 import lesson9.exceptions.ShapeNotFoundException;
 import lesson9.models.Shape;
+import lesson9.repository.ShapeRepositoryEmptyException;
 import lesson9.requests.ShapeChoiceRequest;
 import lesson9.services.ShapeChoiceService;
 import lesson9.services.ShapeOperationService;
@@ -19,6 +20,10 @@ public class ShapeChoiceMenuAction implements MenuAction {
         this.shapeOperationService = shapeOperationService;
     }
 
+    private void initiateOperationMenuAction() {
+        ShapeOperationMenuAction shapeOperationMenuAction = new ShapeOperationMenuAction(userInput, shapeOperationService);
+        shapeOperationMenuAction.execute();
+    }
     @Override
     public String getName() {
         return "Choose shape";
@@ -28,14 +33,14 @@ public class ShapeChoiceMenuAction implements MenuAction {
     public void execute() {
         try {
             ShapeChoiceRequest shapeChoiceRequest = userInput.getShapeChoiceRequestFromUser();
+
             Shape shape = shapeChoiceService.chooseShape(shapeChoiceRequest);
-            System.out.println("Shape choice: " + shape.toString());
             this.userInput.setChosenShape(shape);
-            ShapeOperationMenuAction shapeOperationMenuAction = new ShapeOperationMenuAction(userInput, shapeOperationService);
-            shapeOperationMenuAction.execute();
-        } catch (ShapeNotFoundException e) {
+            System.out.println("Shape choice: " + shape.toString());
+
+            initiateOperationMenuAction();
+        } catch (ShapeNotFoundException | ShapeRepositoryEmptyException e) {
             System.err.println(e.getMessage());
-            System.err.println("Please CREATE a new shape!");
         }
     }
 }

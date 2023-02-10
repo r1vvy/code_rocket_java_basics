@@ -21,6 +21,7 @@ public class ShapeOperationMenuAction implements MenuAction {
 
     @Override
     public void execute() {
+        // TODO: catch NullPointerException
         ShapeOperationRequest shapeOperationRequest = this.userInput.getShapeOperationRequestFromUser();
         int actionChoice = shapeOperationRequest.getActionChoice();
         switch (actionChoice) {
@@ -28,8 +29,7 @@ public class ShapeOperationMenuAction implements MenuAction {
             case 2 -> shapeOperationService.calculateAreaOfShapeFromUserInput(shapeOperationRequest);
             case 3 -> shapeOperationService.addShapePerimeterFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
             case 4 -> shapeOperationService.addShapeAreaFromUserInputToTotalPerimeterInRepo(shapeOperationRequest);
-            default -> {
-            }
+            default -> throw new IllegalArgumentException("Invalid input");
         }
         System.out.println("Updated succesfully!");
     }

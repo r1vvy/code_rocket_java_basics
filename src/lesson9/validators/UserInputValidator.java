@@ -10,7 +10,6 @@ public class UserInputValidator {
                 return false;
             }
         }
-
         return true;
     }
 }

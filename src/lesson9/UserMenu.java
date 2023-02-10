@@ -22,9 +22,8 @@ public class UserMenu {
 
                 MenuAction action = actions.get(choice);
                 action.execute();
-            } catch(InputMismatchException | ArrayIndexOutOfBoundsException e) {
-                System.out.println("Invalid input. Please choose from the options below:");
-                System.out.println();
+            } catch(IllegalArgumentException | InputMismatchException | ArrayIndexOutOfBoundsException e) {
+                System.err.println("Invalid input!");
             }
         }
     }
