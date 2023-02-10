@@ -29,9 +29,6 @@ public class ShapeRepository {
     public Map<Integer, Shape> getRepository() {
         return repository;
     }
-    public Optional<Shape> findShape(Shape shape) {
-        return Optional.ofNullable(repository.get(shape));
-    }
     public boolean isRepositoryEmpty() {
         return this.repository.isEmpty();
     }

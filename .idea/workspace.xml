@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException.">
-      <change afterPath="$PROJECT_DIR$/src/lesson9/ShapeOperationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/ShapeRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676018620222</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException.">
+      <created>1676019300309</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676019300309</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException.">
+      <created>1676019307268</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676019307268</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
