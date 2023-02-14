@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it.">
-      <change afterPath="$PROJECT_DIR$/src/lesson9/services/tests/ShapeServiceTest.java" afterDir="false" />
+    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point.">
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/MenuAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorDtoConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/CreateAuthorMenuAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/models/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/models/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/services/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/services/ShapeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/emilsseflers/IdeaProjects/Hello World/src/lesson2/task10&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/emilsseflers/IdeaProjects/Hello World/src",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lesson9" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/lesson2/task10" />
       <recent name="$PROJECT_DIR$/src/lesson2/task6" />
       <recent name="$PROJECT_DIR$/src/lesson2/task4" />
@@ -172,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676357123437</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point.">
+      <created>1676369935813</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676369935813</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +205,8 @@
     <MESSAGE value="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException." />
     <MESSAGE value="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options" />
     <MESSAGE value="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it." />
+    <MESSAGE value="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
