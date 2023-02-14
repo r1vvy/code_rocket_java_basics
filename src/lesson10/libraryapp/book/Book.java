@@ -6,7 +6,7 @@ public class Book {
 
     private Integer id;
     private String title;
-    private Author author;
+    protected Author author;
 
     public Integer getId() {
         return id;

@@ -5,6 +5,7 @@ import lesson10.libraryapp.author.Author;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class BookRepository {
@@ -18,7 +19,9 @@ public class BookRepository {
                          .collect(Collectors.toList());
     }
 
-
+    public Optional<Book> findById(Integer id) {
+        return Optional.ofNullable(repository.get(id));
+    }
     public Book save(Book book) {
         book.setId(bookIdSequence);
         bookIdSequence++;
@@ -29,7 +32,7 @@ public class BookRepository {
     }
 
     public Book delete(Book book) {
-        this.repository.remove(book);
+        this.repository.remove(book.getId());
 
         return book;
     }

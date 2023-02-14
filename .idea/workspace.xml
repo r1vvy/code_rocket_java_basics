@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added L10 HomeWork files. Updated: Repo with remove method; Author with addBook and setBook methods; AuthorDto with getBooks and setBooks methods; AuthorDtoConverter convert method with setBooks function.">
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/UserMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookDtoConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookService.java" afterDir="false" />
+    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods.">
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/tests/AuthorServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/tests/BookServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/author/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/models/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/models/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,33 @@
       <recent name="lesson2.task4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ShapeServiceTest">
+  <component name="RunManager" selected="Application.AuthorServiceTest">
+    <configuration name="AuthorServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson10.libraryapp.author.tests.AuthorServiceTest" />
+      <module name="Hello World" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson10.libraryapp.author.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson10.libraryapp.book.tests.BookServiceTest" />
+      <module name="Hello World" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson10.libraryapp.book.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShapeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson9.ShapeDemo" />
       <module name="Hello World" />
@@ -110,25 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TemperatureConversionServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson7.tests.TemperatureConversionServiceTest" />
-      <module name="Hello World" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson7.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AuthorServiceTest" />
+        <item itemvalue="Application.BookServiceTest" />
         <item itemvalue="Application.ShapeServiceTest" />
         <item itemvalue="Application.ShapeDemo" />
         <item itemvalue="Application.TemperatureConversionDemo" />
-        <item itemvalue="Application.TemperatureConversionServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676372178372</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods.">
+      <created>1676374992527</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374992527</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +232,8 @@
     <MESSAGE value="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it." />
     <MESSAGE value="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point." />
     <MESSAGE value="Added L10 HomeWork files. Updated: Repo with remove method; Author with addBook and setBook methods; AuthorDto with getBooks and setBooks methods; AuthorDtoConverter convert method with setBooks function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added L10 HomeWork files. Updated: Repo with remove method; Author with addBook and setBook methods; AuthorDto with getBooks and setBooks methods; AuthorDtoConverter convert method with setBooks function." />
+    <MESSAGE value="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

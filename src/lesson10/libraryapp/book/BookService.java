@@ -3,7 +3,6 @@ package lesson10.libraryapp.book;
 import lesson10.libraryapp.EntityNotFoundException;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class BookService {
 
@@ -22,6 +21,12 @@ public class BookService {
         return bookDtoConverter.convert(book);
     }
 
+    public BookDto delete(Book book) {
+        Book deletedBook = bookRepository.delete(book);
+
+        return bookDtoConverter.convert(book);
+    }
+
     public List<BookDto> getAllBooksByStartWith(String prefix) {
         List<BookDto> bookDtos =  bookRepository.findAllByStartWith(prefix)
                 .stream()
@@ -33,5 +38,11 @@ public class BookService {
         } else {
             throw new EntityNotFoundException("Book's title that starts with this prefix: " + prefix + " not found!");
         }
+    }
+
+    public BookDto getBookById(Integer id) {
+        return this.bookRepository.findById(id)
+                .map(bookDtoConverter::convert)
+                .orElseThrow(() -> new EntityNotFoundException("Book not found with id = " + id));
     }
 }

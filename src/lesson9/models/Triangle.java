@@ -2,6 +2,7 @@ package lesson9.models;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 public class Triangle extends Shape {
@@ -35,7 +36,12 @@ public class Triangle extends Shape {
                 .multiply(halfPerimeter.subtract(sideB))
                 .multiply(halfPerimeter.subtract(sideC));
 
-        this.setArea(BigDecimal.valueOf(Math.sqrt(area.doubleValue())));
+        // Math.sqrt is used here for more precise sqrt calculation
+        area = BigDecimal.valueOf(Math.sqrt(area.doubleValue()));
+
+        area = area.setScale(2, RoundingMode.HALF_EVEN);
+
+        this.setArea(area);
     }
 
     @Override
