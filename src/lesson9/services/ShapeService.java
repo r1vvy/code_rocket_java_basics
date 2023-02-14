@@ -4,7 +4,7 @@ import lesson9.exceptions.ShapeNotFoundException;
 import lesson9.exceptions.ShapeUpdateException;
 import lesson9.models.Shape;
 import lesson9.repository.ShapeRepository;
-import lesson9.repository.ShapeRepositoryEmptyException;
+import lesson9.exceptions.ShapeRepositoryEmptyException;
 
 import java.math.BigDecimal;
 
@@ -29,7 +29,7 @@ public class ShapeService {
         if(shape != null && shapeRepo.doesShapeExist(shape)) {
             this.shapeRepo.update(shape.getId(), shape);
         } else {
-            new ShapeUpdateException("Failed to update shape");
+            throw new ShapeUpdateException("Failed to update shape");
         }
     }
 

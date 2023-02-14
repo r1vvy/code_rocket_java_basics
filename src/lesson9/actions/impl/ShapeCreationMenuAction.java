@@ -32,7 +32,7 @@ public class ShapeCreationMenuAction implements MenuAction {
             this.shapeCreationService.saveShapeFromUserInput(request);
             System.out.println("Shape created successfully!");
             System.out.println("New shape: " + shape.toString());
-        } catch (IllegalArgumentException | InputMismatchException e) {
+        } catch (ShapeValidationException | InputMismatchException e) {
             if(e.getMessage() != null) {
                 System.err.println(e.getMessage());
             }

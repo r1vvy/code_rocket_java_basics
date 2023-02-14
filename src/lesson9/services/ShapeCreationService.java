@@ -1,5 +1,6 @@
 package lesson9.services;
 
+import lesson9.exceptions.ShapeValidationException;
 import lesson9.models.Shape;
 import lesson9.requests.ShapeCreationRequest;
 import lesson9.validators.UserInputValidator;
@@ -17,8 +18,8 @@ public class ShapeCreationService {
         Shape shape = request.getShape();
         shape.setParametersMap(request.getParameters());
 
-        if(userInputValidator.validateShapeCreationParameters(shape.getParametersMap()) == false) {
-            throw new IllegalArgumentException("Parameter value should be greater than zero");
+        if(!userInputValidator.validateShapeCreationParameters(shape.getParametersMap())) {
+            throw new ShapeValidationException("Parameter value should be greater than zero");
         } else {
             return shape;
         }

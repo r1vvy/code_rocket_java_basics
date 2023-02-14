@@ -1,4 +1,4 @@
-package lesson9.repository;
+package lesson9.exceptions;
 
 public class ShapeRepositoryEmptyException extends RuntimeException {
     public ShapeRepositoryEmptyException(String message) {

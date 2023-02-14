@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options">
+    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/UserMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeChoiceMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeChoiceMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeOperationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeOperationMenuAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/validators/UserInputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/validators/UserInputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeCreationMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/actions/impl/ShapeCreationMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/repository/ShapeRepositoryEmptyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/exceptions/ShapeRepositoryEmptyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/services/ShapeCreationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/services/ShapeCreationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson9/services/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/services/ShapeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +170,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Calculate area and perimeter operations with Shapes, Shape update function in Repository and ShapeService. Created ShapeUpdateException." />
     <MESSAGE value="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added totalArea and totalPerimeter to repo with getters and setters and updated UserInput getShapeOperationRequestFromUser() method to print these options" />
+    <MESSAGE value="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved ShapeRepositoryEmptyException from ./repository to ./exceptions&#10;Updated ShapeCreationService to throw ShapeValidationException and ShapeCreationMenuAction to catch it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
