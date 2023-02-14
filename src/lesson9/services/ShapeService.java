@@ -18,6 +18,7 @@ public class ShapeService {
         return shapeRepo.findShapeById(id).orElseThrow(() -> new ShapeNotFoundException("Shape not found with id = " + id));
     }
 
+    // TODO: test(shouldFindShape) fails!
     public Shape getShape(Shape shape) {
         return shapeRepo.findShape(shape).orElseThrow(() -> new ShapeNotFoundException("Shape not found"));
     }
