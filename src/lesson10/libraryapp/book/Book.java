@@ -32,4 +32,9 @@ public class Book {
         this.author = author;
     }
 
+    public void addAuthor(Author author) {
+        this.author = author;
+        author.addBook(this);
+    }
+
 }
