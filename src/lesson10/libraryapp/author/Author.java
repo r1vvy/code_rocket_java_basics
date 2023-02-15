@@ -41,15 +41,14 @@ public class Author {
         return books;
     }
 
-    // TODO this throws StackOverFlowError
     public void addBooks(List<Book> books) {
         books.forEach(book -> {
-            book.setAuthor(this);
             this.addBook(book);
         });
     }
 
     public void addBook(Book book) {
+        book.setAuthor(this);
         this.books.add(book);
     }
 

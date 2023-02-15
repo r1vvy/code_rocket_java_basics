@@ -20,6 +20,11 @@ public class AuthorService {
         return authorDtoConverter.convert(savedAuthor);
     }
 
+    public AuthorDto delete(Author author) {
+        Author deletedAuthor = authorRepository.delete(author);
+        return authorDtoConverter.convert(deletedAuthor);
+    }
+
     public AuthorDto getAuthorById(Integer id) {
 //        Author author = authorRepository.findAuthorById(id);
 //        if (author == null) {

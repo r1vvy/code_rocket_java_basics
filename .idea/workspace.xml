@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods.">
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/tests/AuthorServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/tests/BookServiceTest.java" afterDir="false" />
+    <list default="true" id="a432048c-6c55-4052-9fc3-46a101f2709e" name="Changes" comment="Added TODO for Author model, created AuthorService and BookService tests, Changed Triangle calculateArea method to return a value rounded to two decimal points.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/author/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/author/tests/AuthorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/author/tests/AuthorServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson10/libraryapp/book/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson9/models/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson9/models/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/emilsseflers/IdeaProjects/Hello World/src",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/emilsseflers/IdeaProjects/Hello World/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lesson9" />
@@ -71,7 +70,7 @@
       <recent name="lesson2.task4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AuthorServiceTest">
+  <component name="RunManager" selected="Application.BookServiceTest">
     <configuration name="AuthorServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson10.libraryapp.author.tests.AuthorServiceTest" />
       <module name="Hello World" />
@@ -139,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AuthorServiceTest" />
         <item itemvalue="Application.BookServiceTest" />
+        <item itemvalue="Application.AuthorServiceTest" />
         <item itemvalue="Application.ShapeServiceTest" />
         <item itemvalue="Application.ShapeDemo" />
         <item itemvalue="Application.TemperatureConversionDemo" />
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676374992527</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added TODO for Author model, created AuthorService and BookService tests, Changed Triangle calculateArea method to return a value rounded to two decimal points.">
+      <created>1676383954343</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676383954343</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +239,8 @@
     <MESSAGE value="Added ShapeService tests and made calculateArea() and calculatePerimeter() for Circle model to round half up to two integers after decimal point." />
     <MESSAGE value="Added L10 HomeWork files. Updated: Repo with remove method; Author with addBook and setBook methods; AuthorDto with getBooks and setBooks methods; AuthorDtoConverter convert method with setBooks function." />
     <MESSAGE value="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BookDto, BookDtoConverter, UserInput and UserMenu; &#10;Updated BookRepository with bookIdSequence and save methods." />
+    <MESSAGE value="Added TODO for Author model, created AuthorService and BookService tests, Changed Triangle calculateArea method to return a value rounded to two decimal points." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TODO for Author model, created AuthorService and BookService tests, Changed Triangle calculateArea method to return a value rounded to two decimal points." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class BookRepository {
 
-    private Integer bookIdSequence = 0;
+    private Integer bookIdSequence = 1;
     private Map<Integer, Book> repository = new HashMap<>();
 
     public List<Book> findAllByStartWith(String prefix) {

@@ -5,8 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class AuthorRepository {
-
-    private static Integer authorIdSequence = 0;
+    private Integer authorIdSequence = 1;
     private Map<Integer, Author> repository = new HashMap<>();
 
     public Author save(Author author) {
